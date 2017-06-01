@@ -10,7 +10,7 @@
 <ion-content class="card-background-page">
 
 
-    <ion-card class="lel" *ngFor="let category of categories " (click)="categoryTapped($event, category) ">
+    <ion-card class="stats" *ngFor="let category of categories " (click)="categoryTapped($event, category) ">
         <img src="{{category.image}}" />
         <div class="card-title "> {{category.name}}</div>
 
