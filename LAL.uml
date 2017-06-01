@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/Ivan/restaurant-app/src/pages</OriginalElement>
+  <nodes>
+    <node x="-52.1415094339622" y="421.70754716981133">Observable;</node>
+    <node x="-41.99056603773579" y="43.89622641509433">C:/Users/Ivan/restaurant-app/src/providers/api.ts#Api#201;</node>
+    <node x="119.81132075471703" y="243.87735849056605">C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;</node>
+    <node x="-167.6037735849057" y="113.98113207547169">C:/Users/Ivan/restaurant-app/src/providers/cartProvider.ts#CartProvider#225;</node>
+    <node x="410.2924528301887" y="246.8867924528302">C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;</node>
+    <node x="635.4716981132077" y="244.34905660377365">C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#CategoryPage#110;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavParams#67;</node>
+    <node x="330.2075471698113" y="418.37735849056605">Component;</node>
+    <node x="261.6886792452831" y="244.30188679245285">C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;</node>
+    <node x="-132.26415094339626" y="241.5283018867925">C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;</node>
+    <node x="698.0283018867926" y="123.26415094339623">C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/components/loading/loading.d.ts#LoadingController#934;</node>
+    <node x="429.32075471698124" y="-11.12264150943399">C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;</node>
+    <node x="142.7924528301886" y="-8.660377358490564">C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;</node>
+    <node x="78.66037735849056" y="416.51886792452825">C:/Users/Ivan/restaurant-app/node_modules/rxjs/observable/of.d.ts#of#74;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#CategoryPage#110;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="C:/Users/Ivan/restaurant-app/src/providers/cartProvider.ts#CartProvider#225;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/src/providers/api.ts#Api#201;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="Component;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#CategoryPage#110;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavParams#67;" target="Component;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#CategoryPage#110;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#CategoryPage#110;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/home/home.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="Observable;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/components/loading/loading.d.ts#LoadingController#934;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;" target="Component;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="Observable;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="Component;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="Component;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Api#163;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#CategoryPage#358;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#ItemPage#128;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#LoadingController#78;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/category/category.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-controller.d.ts#NavController#182;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Api#109;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemPage#341;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#ItemdetailPage#153;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/item/item.ts#NavParams#67;" target="C:/Users/Ivan/restaurant-app/src/providers/api.ts#Api#201;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="C:/Users/Ivan/restaurant-app/node_modules/rxjs/observable/of.d.ts#of#74;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="C:/Users/Ivan/restaurant-app/node_modules/ionic-angular/navigation/nav-params.d.ts#NavParams#0;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartPage#109;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#CartProvider#144;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#ItemdetailPage#383;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/itemdetail/itemdetail.ts#Observable#197;" target="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartPage#381;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#CartProvider#109;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Component#9;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavController#52;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#NavParams#67;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#Observable#162;C:/Users/Ivan/restaurant-app/src/pages/cart/cart.ts#of#195;" target="C:/Users/Ivan/restaurant-app/src/providers/cartProvider.ts#CartProvider#225;">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.75177304964539" x="454.7358490566038" y="514.0" />
+  <SelectedNodes>
+    <node>Observable;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Overview</VISIBILITY>
+</Diagram>
+

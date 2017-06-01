@@ -1,0 +1,28 @@
+page-category {}
+
+.card-background-page {
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .lel {
+        margin-bottom: 5px !important;
+        max-height: 200px;
+    }
+    .card-title {
+        position: absolute;
+        top: 45%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: antiquewhite;
+        text-shadow: 3px 1px 14px rgba(0, 0, 0, 0.33);
+    }
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+}

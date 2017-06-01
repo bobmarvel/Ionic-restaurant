@@ -1,0 +1,12 @@
+{
+  "name": "restaurant-app",
+  "app_id": "5aa1599b",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://ec2-52-40-252-107.us-west-2.compute.amazonaws.com:443/login"
+    }
+  ]
+}

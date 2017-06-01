@@ -1,0 +1,21 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Категории</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+    <!--<button ion-item *ngFor="let category of categories" (click)="categoryTapped($event, category)"> 
+{{category.name}}</button>-->
+
+    <ion-card class="lel" *ngFor="let category of categories " (click)="categoryTapped($event, category) ">
+        <img src="{{category.image}}" />
+        <div class="card-title "> {{category.name}}</div>
+
+    </ion-card>
+
+</ion-content>

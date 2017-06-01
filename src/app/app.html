@@ -1,0 +1,21 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title class="md">Меню</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list-header>Навигация</ion-list-header>
+        <ion-list>
+            <button menuClose ion-item (click)="goHome()"> <ion-icon name="md-home"></ion-icon> Домой</button>
+            <button menuClose ion-item (click)="goToCategory()">  <ion-icon name="list"></ion-icon> Категории </button>
+            <button menuClose ion-item (click)="goToCart()"><ion-icon name="cart"></ion-icon>  Корзина </button>
+            <button menuClose ion-item (click)="goToZakaz()"> <ion-icon name="md-restaurant"></ion-icon> Ваши заказы </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

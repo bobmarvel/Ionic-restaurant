@@ -1,0 +1,16 @@
+page-item {
+    .wut {
+        max-width: 100%;
+        max-height: 250px;
+    }
+    .bck {
+        background-image: url('https://s-media-cache-ak0.pinimg.com/originals/c2/9a/f4/c29af42319bb035b0c0dd509a91ae7d3.jpg');
+        -webkit-background-image: url('https://s-media-cache-ak0.pinimg.com/originals/c2/9a/f4/c29af42319bb035b0c0dd509a91ae7d3.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .okay {
+        color: black;
+        font-style: bold;
+        font-weight: 200;
+    }
+}
