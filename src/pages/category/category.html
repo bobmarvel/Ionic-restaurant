@@ -9,8 +9,6 @@
 
 <ion-content class="card-background-page">
 
-    <!--<button ion-item *ngFor="let category of categories" (click)="categoryTapped($event, category)"> 
-{{category.name}}</button>-->
 
     <ion-card class="lel" *ngFor="let category of categories " (click)="categoryTapped($event, category) ">
         <img src="{{category.image}}" />
