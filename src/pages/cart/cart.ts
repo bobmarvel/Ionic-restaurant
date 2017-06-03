@@ -95,22 +95,37 @@ export class CartPage {
           text: 'Да',
           handler: () => {
             item = this.shoppingCartItems;
-            this.globalvar.post(item);
-            item.forEach(element => {
-              this.cartprovdr.removeFromCart(element);
-            });
-
+            this.globalvar.post(item).subscribe(
+       (data) => {
+       
+       
             let alert = this.alrt.create({       
         subTitle: 'Спасибо за заказ! Сейчас вы будете перенаправлены на страницу с заказами.'             
       });
       alert.present();
       setTimeout(()=>{
           alert.dismiss();
-          this.navCtrl.push(ZakazPage);
+          
       }, 3030);
-            
-           
-           
+     }, (error) => {
+        let alert = this.alrt.create({
+          title: 'Error happened',
+      subTitle: "Error code is " + error,
+      buttons: ['OK']
+        });
+        alert.present();
+       
+     },
+     
+      () => {
+          
+     });
+
+           item.forEach(element => {
+              this.cartprovdr.removeFromCart(element);
+            }); 
+
+     
          
           }
         }

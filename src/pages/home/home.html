@@ -21,6 +21,18 @@
 </ion-header>
 
 
-<ion-content padding>
-    <button ion-button (click)="MoveToCat()">Категории </button>
+<ion-content>
+
+    <div class="rofl">
+
+        <ion-slides pager>
+            <ion-slide *ngFor="let item of favitem" (click)="goToDetails()">
+                <img src="{{item.picture}}" alt="">
+                <h2>{{item.name}}</h2>
+                <p>{{item.descript}}</p>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <button ion-button full color="primary" (click)="MoveToCat()">Категории </button>
+
 </ion-content>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 // import * as _ from 'lodash';
-import {Observable} from 'rxjs/Observable';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {TableID} from '../providers/shared';
 
 
@@ -17,6 +17,9 @@ CurrentCategory : any = {}
 IDStola: any;
   menu: any;
   idfoods: number;
+  favitemarray :any[] = [];
+  favitem: any;
+  temparr =[];
 
   constructor(public http: Http, ) {
 
@@ -77,20 +80,38 @@ IDStola: any;
     let body = {
       temp
      };
-     this.http.post(this.posturl, JSON.stringify(body), options)
+    return this.http.post(this.posturl, JSON.stringify(body), options)
      .map(res => res.json())
-     .subscribe(
-       (data) => {
-       console.log(data);
-     }, (error) => {
-       alert("Error has been happened! Please, retry again. The error is: " + error);
-     }, () => {
-        
-        
+    
+
+ }
+  dayitem(){
+    
+     return this.http.get(`${this.menu}.json`).map((resp: Response) => {
+       this.favitem = resp.json().foods;
+       for(let i=0; i<this.favitem.length;i++){
+         
+         this.favitemarray.push(this.favitem[i].foods);
+         
+            this.favitemarray.forEach((array) => {
+                array.forEach(element => {
+                  if (element.top == true) {
+                      if (this.temparr.indexOf(element) ==-1) {
+                          this.temparr.push(element);
+                      }
+                      
+                      
+                  }
+                });
+            })
+         
+       }
        
+      return this.temparr;
      })
+  }
 
  }
 
 
-}
+

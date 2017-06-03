@@ -15,6 +15,7 @@ import {Api} from '../../providers/shared';
 })
 export class HomePage {
 
+  favitem: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public api: Api, public loadCtrl: LoadingController) {}
@@ -25,11 +26,20 @@ export class HomePage {
       this.navCtrl.popToRoot();
     } 
       console.log(this.api.menu);
+      this.api.dayitem().subscribe((data) =>{
+        this.favitem = data;
+        console.log(data);
+       
+      })
+    
   }
 
   MoveToCat() {
       this.navCtrl.push(CategoryPage);
   }
 
+goToDetails() {
+  
+}
 
 }
