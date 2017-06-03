@@ -61,20 +61,21 @@ IDStola: any;
    let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
+     const temp = item;
 
-    for (let i =0; i<item.length; i++) {
-      delete item[i].descript;
-      delete item[i].picture;
-      delete item[i].price;
-      delete item[i].summary;
-      delete item[i].top;
+    for (let i =0; i<temp.length; i++) {
+      delete temp[i].descript;
+      delete temp[i].picture;
+      delete temp[i].price;
+      delete temp[i].summary;
+      delete temp[i].top;
     }
-      console.log("Post function test AFTER" , item);
+      console.log("Post function test AFTER" , temp);
    
     
     let options = new RequestOptions({ headers: headers });
     let body = {
-      item
+      temp
      };
      this.http.post(this.posturl, JSON.stringify(body), options)
      .map(res => res.json())
@@ -84,7 +85,7 @@ IDStola: any;
      }, (error) => {
        alert("Error has been happened! Please, retry again. The error is: " + error);
      }, () => {
-        /*this.globalvar.IDStola = this.results;*/
+        
         
        
      })

@@ -93,6 +93,9 @@ export class CartPage {
           handler: () => {
             item = this.shoppingCartItems;
             this.globalvar.post(item);
+            item.forEach(element => {
+              this.cartprovdr.removeFromCart(element);
+            });
            
            
          
