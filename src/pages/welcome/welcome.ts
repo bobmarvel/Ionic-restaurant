@@ -13,7 +13,6 @@ import {Api} from '../../providers/shared';
 export class WelcomePage {
   results: any;
   
-  private BaseUrl = "https://food-71485.firebaseio.com";
   private BaseUrlTRUE = "http://ec2-52-40-252-107.us-west-2.compute.amazonaws.com:443/rest/login";
 
 
@@ -76,7 +75,7 @@ test(){
     // let body = this.results.text;
     let body = {"qr": 12345}
     
-     this.http.post(this.BaseUrl, JSON.stringify(body), {headers: headers})
+     this.http.post(this.BaseUrlTRUE, JSON.stringify(body), {headers: headers})
      .map(res => res.json())
      .subscribe(
        (data) => {
@@ -84,7 +83,7 @@ test(){
      }, (error) => {
        alert("Error has been happened! Please, retry again. The error is: " + error);
      }, () => {
-        this.globalvar.IDStola = this.results;
+        this.globalvar.IDStola = this.results.text;
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot;
      })
@@ -106,7 +105,7 @@ reset(){
 
     
    
-    // let qr = this.results.text;
+    
     let options = new RequestOptions({ headers: headers });
     let body = {
       "qr": 123  
@@ -121,7 +120,7 @@ reset(){
      }, (error) => {
        alert("Error has been happened! Please, retry again. The error is: " + error);
      }, () => {
-        /*this.globalvar.IDStola = this.results;*/
+        
         
        this.globalvar.IDStola = 123; 
     this.navCtrl.setRoot(HomePage);
@@ -129,9 +128,6 @@ reset(){
      })
 
 
-  /* this.globalvar.IDStola = 12345; 
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;*/
     
   }
 

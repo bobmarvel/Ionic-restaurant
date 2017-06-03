@@ -43,7 +43,7 @@ export class CartPage {
             for (j; j < this.cartprovdr.newmassive.length; j++ ) {
               if (data[i].id == this.cartprovdr.newmassive[j].id) {
                     data[i].qty = this.cartprovdr.newmassive[j].qty;
-                    data[i].idstola = this.globalvar.IDStola;
+                   
               }
             }
               
@@ -78,21 +78,23 @@ export class CartPage {
       
 
       let confirm = this.alrt.create({
-      title: 'Use this lightsaber?',
-      message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+      title: 'Ваш заказ будет отправлен на сервер. Вы уверены?',
+      message: 'Отправить заказ?',
       buttons: [
         {
-          text: 'Disagree',
+          text: 'Нет',
           role: 'cancel',
           handler: () => {
-            console.log('Disagree clicked');
+            
           }
         },
         {
-          text: 'Agree',
+          text: 'Да',
           handler: () => {
             item = this.shoppingCartItems;
-            console.log(item);  
+            this.globalvar.post(item);
+           
+           
          
           }
         }

@@ -41,10 +41,6 @@ export class CartProvider {
   console.log(this.newmassive);
 
 
-
-
-
-
   }
 
 public removeFromCart(item) {
