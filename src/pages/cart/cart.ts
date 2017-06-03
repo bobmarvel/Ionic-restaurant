@@ -1,6 +1,9 @@
+
 import { CategoryPage } from './../category/category';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+
+import {ZakazPage} from '../pages';
 import {CartProvider, Api} from '../../providers/shared';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs/observable/of';
@@ -96,6 +99,16 @@ export class CartPage {
             item.forEach(element => {
               this.cartprovdr.removeFromCart(element);
             });
+
+            let alert = this.alrt.create({       
+        subTitle: 'Спасибо за заказ! Сейчас вы будете перенаправлены на страницу с заказами.'             
+      });
+      alert.present();
+      setTimeout(()=>{
+          alert.dismiss();
+          this.navCtrl.push(ZakazPage);
+      }, 3030);
+            
            
            
          

@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar hideBackButton color="primary">
         <ion-title>Заказы</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="goHome()">
+        <ion-icon name="home" style="zoom:1.5;"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 
 </ion-header>
