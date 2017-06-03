@@ -1,6 +1,6 @@
 import { CategoryPage } from './../category/category';
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import {CartProvider, Api} from '../../providers/shared';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs/observable/of';
@@ -21,7 +21,7 @@ export class CartPage {
   public shoppingCartItems = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-  public cartprovdr: CartProvider, private globalvar: Api, private toast: ToastController) {
+  public cartprovdr: CartProvider, private globalvar: Api, private toast: ToastController, private alrt: AlertController) {
     
   }
 
@@ -75,9 +75,32 @@ export class CartPage {
   }
 
   post(item) {
-      item = this.shoppingCartItems;
-      console.log(item);
+      
+
+      let confirm = this.alrt.create({
+      title: 'Use this lightsaber?',
+      message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+      buttons: [
+        {
+          text: 'Disagree',
+          role: 'cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Agree',
+          handler: () => {
+            item = this.shoppingCartItems;
+            console.log(item);  
+         
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
+
 
   plusqty(item) {
       let i: number =0 ; 

@@ -14,7 +14,7 @@ export class WelcomePage {
   results: any;
   
   private BaseUrl = "https://food-71485.firebaseio.com";
-  private BaseUrlTRUE = "http://ec2-52-40-252-107.us-west-2.compute.amazonaws.com:443/login";
+  private BaseUrlTRUE = "http://ec2-52-40-252-107.us-west-2.compute.amazonaws.com:443/rest/login";
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -100,12 +100,13 @@ reset(){
  dev() {
       
 
-     /*  let headers = new Headers();
+       let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
 
     
-    // let body = this.results.text;
+   
+    // let qr = this.results.text;
     let options = new RequestOptions({ headers: headers });
     let body = {
       "qr": 123  
@@ -120,17 +121,17 @@ reset(){
      }, (error) => {
        alert("Error has been happened! Please, retry again. The error is: " + error);
      }, () => {
-        // this.globalvar.IDStola = this.results;
+        /*this.globalvar.IDStola = this.results;*/
         
        this.globalvar.IDStola = 123; 
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot;
-     })*/
+     })
 
 
-   this.globalvar.IDStola = 12345; 
+  /* this.globalvar.IDStola = 12345; 
     this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;
+    this.navCtrl.popToRoot;*/
     
   }
 

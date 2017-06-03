@@ -32,7 +32,6 @@ export class ItemPage {
       loader.present().then(()=>{
        this.api.getFoodData(this.selectedCategory.id).subscribe((data) => {
      this.foods = data.foods;
-     console.log(this.foods);
      loader.dismiss();
    })
       });

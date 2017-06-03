@@ -22,7 +22,7 @@ IDStola: any;
   }
   getCategory():Promise<any> {
     return new Promise(resolve => {
-      this.http.get(`${this.BaseUrl}/categorys.json`)
+      this.http.get(`${this.menu}.json`)
       .subscribe(res => {
         resolve(res.json());
       })
@@ -30,11 +30,13 @@ IDStola: any;
   }
 
  getFoodData(catID): Observable<any> {
-   catID = catID-1;
-    return this.http.get(`${this.BaseUrl}/foods/${catID}.json`)
+   catID = catID-5;
+    return this.http.get(`${this.menu}.json`)
     .map((res: Response) => {
+      
       this.CurrentCategory = res.json();
-      return this.CurrentCategory;
+      console.log(this.CurrentCategory.foods[catID].foods);
+      return this.CurrentCategory.foods[catID];
     })
  }
 

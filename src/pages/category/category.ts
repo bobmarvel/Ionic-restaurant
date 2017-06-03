@@ -43,7 +43,7 @@ export class CategoryPage {
       })
       loader.present().then(()=>{
         this.api.getCategory().then(data => {
-        this.categories = data;
+        this.categories = data.categorys;
         loader.dismiss();
         console.log(this.categories);
 
