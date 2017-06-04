@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 // import * as _ from 'lodash';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {TableID} from '../providers/shared';
+import {Observable} from 'rxjs';
 
 
 
@@ -12,7 +11,7 @@ export class Api {
 
 private posturl = "http://ec2-52-40-252-107.us-west-2.compute.amazonaws.com:443/order";
 
-CurrentCategory : any = {}
+CurrentCategory : any = {};
 
 IDStola: any;
   menu: any;
@@ -34,15 +33,15 @@ IDStola: any;
   }
 
  getFoodData(catID): Observable<any> {
-   
-   
- 
+
+
+
     return this.http.get(`${this.menu}.json`)
     .map((res: Response) => {
-      
+
       this.CurrentCategory = res.json();
       /*this.CurrentCategory.foods.forEach(element => {
-       
+
         if (element.id == catID) {
             console.log("ELEGIGGLE :" , element.id)
         }
@@ -74,39 +73,39 @@ IDStola: any;
       delete temp[i].top;
     }
       console.log("Post function test AFTER" , temp);
-   
-    
+
+
     let options = new RequestOptions({ headers: headers });
     let body = {
       temp
      };
     return this.http.post(this.posturl, JSON.stringify(body), options)
      .map(res => res.json())
-    
+
 
  }
   dayitem(){
-    
+
      return this.http.get(`${this.menu}.json`).map((resp: Response) => {
        this.favitem = resp.json().foods;
        for(let i=0; i<this.favitem.length;i++){
-         
+
          this.favitemarray.push(this.favitem[i].foods);
-         
+
             this.favitemarray.forEach((array) => {
                 array.forEach(element => {
                   if (element.top == true) {
                       if (this.temparr.indexOf(element) ==-1) {
                           this.temparr.push(element);
                       }
-                      
-                      
+
+
                   }
                 });
             })
-         
+
        }
-       
+
       return this.temparr;
      })
   }

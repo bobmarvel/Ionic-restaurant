@@ -72,16 +72,22 @@ test(){
   
      let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    // let body = this.results.text;
-    let body = {"qr": 12345}
     
-     this.http.post(this.BaseUrlTRUE, JSON.stringify(body), {headers: headers})
+    let options = new RequestOptions({ headers: headers });
+    let body = {
+      "qr": this.results.text
+    }
+    
+     this.http.post(this.BaseUrlTRUE, JSON.stringify(body), options)
      .map(res => res.json())
      .subscribe(
        (data) => {
-       alert(data.name);
+       alert("Добро пожаловать");
+      
+       this.globalvar.menu = data.url;
+
      }, (error) => {
-       alert("Error has been happened! Please, retry again. The error is: " + error);
+       alert("Ошибка " + error);
      }, () => {
         this.globalvar.IDStola = this.results.text;
     this.navCtrl.setRoot(HomePage);
@@ -90,9 +96,7 @@ test(){
 
   }
 
-reset(){
-    this.results = null;
-  }
+
 
 
 

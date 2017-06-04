@@ -15,4 +15,9 @@ export class ZakazPage {
     console.log('ionViewDidLoad Zakaz');
   }
 
+goHome() {
+  this.navCtrl.popToRoot;
+  }
+
+
 }
