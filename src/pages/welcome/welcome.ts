@@ -82,22 +82,26 @@ test(){
      .map(res => res.json())
      .subscribe(
        (data) => {
-       alert("Добро пожаловать");
-      
+     if (data.success == false ) {
+            alert(data.info);
+             }
+          else {
+            alert("lll");
+          console.log(data);
        this.globalvar.menu = data.url;
+        
+    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.popToRoot;
+          }
 
      }, (error) => {
        alert("Ошибка " + error);
      }, () => {
         this.globalvar.IDStola = this.results.text;
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;
+    
      })
 
   }
-
-
-
 
 
  dev() {
@@ -118,17 +122,26 @@ test(){
      .map(res => res.json())
      .subscribe(
        (data) => {
-       alert(data.success);
-       console.log(data);
+          if (data.success == false ) {
+            alert(data.info);
+             }
+          else {
+            alert("lll");
+          console.log(data);
        this.globalvar.menu = data.url;
+         this.globalvar.IDStola = 123; 
+    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.popToRoot;
+          }
+             
      }, (error) => {
        alert("Error has been happened! Please, retry again. The error is: " + error);
      }, () => {
         
         
-       this.globalvar.IDStola = 123; 
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;
+    //    this.globalvar.IDStola = 123; 
+    // this.navCtrl.setRoot(HomePage);
+    // this.navCtrl.popToRoot;
      })
 
 

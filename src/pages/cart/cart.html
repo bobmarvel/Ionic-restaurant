@@ -79,7 +79,13 @@
         <ion-item color="primary" text-center> Итоговая цена {{getTotal() | async}} $ </ion-item>
 
 
-        <ion-item (click)="post(shoppingCartItems)"> Отправить заказ на сервер. </ion-item>
+        <div class="center">
+            <button ion-button round color="secondary" (click)="post(shoppingCartItems)" icon-right text-center>
+             Отправить заказ на сервер <ion-icon name="send"></ion-icon> 
+         </button>
+        </div>
+
+
 
     </div>
 </ion-content>

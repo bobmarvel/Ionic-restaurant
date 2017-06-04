@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 
 import { CategoryPage } from './../category/category';
 import { Component } from '@angular/core';
@@ -8,12 +9,7 @@ import {CartProvider, Api} from '../../providers/shared';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs/observable/of';
 
-/*
-  Generated class for the Cart page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-cart',
   templateUrl: 'cart.html'
@@ -96,8 +92,7 @@ export class CartPage {
           handler: () => {
             item = this.shoppingCartItems;
             this.globalvar.post(item).subscribe(
-       (data) => {
-       
+       (data) => {   
        
             let alert = this.alrt.create({       
         subTitle: 'Спасибо за заказ! Сейчас вы будете перенаправлены на страницу с заказами.'             
@@ -114,18 +109,16 @@ export class CartPage {
       buttons: ['OK']
         });
         alert.present();
-       
+        
+        this.navCtrl.popToRoot();
      },
      
       () => {
-          
-     });
-
-           item.forEach(element => {
+          item.forEach(element => {
               this.cartprovdr.removeFromCart(element);
             }); 
+     });
 
-     
          
           }
         }
@@ -162,6 +155,7 @@ export class CartPage {
     }
   }
   goHome() {
-    this.navCtrl.popToRoot();
+    this.navCtrl.setRoot(HomePage);
+      this.navCtrl.popToRoot;
    }
 }

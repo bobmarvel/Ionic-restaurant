@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -16,7 +17,8 @@ export class ZakazPage {
   }
 
 goHome() {
-  this.navCtrl.popToRoot;
+      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.popToRoot;
   }
 
 

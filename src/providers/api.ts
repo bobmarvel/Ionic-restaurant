@@ -16,9 +16,8 @@ CurrentCategory : any = {};
 IDStola: any;
   menu: any;
   idfoods: number;
-  favitemarray :any[] = [];
-  favitem: any;
-  temparr =[];
+   
+   temparr: any[];
 
   constructor(public http: Http, ) {
 
@@ -58,55 +57,63 @@ IDStola: any;
  }
 
  post(item) {
-
-  console.log("Post function test PRE" , item);
+  
+      console.log("Post function test PRE" , item);
    let headers = new Headers();
+   let options = new RequestOptions({ headers: headers });
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
-     const temp = item;
+      this.temparr = [...item];
 
-    for (let i =0; i<temp.length; i++) {
-      delete temp[i].descript;
-      delete temp[i].picture;
-      delete temp[i].price;
-      delete temp[i].summary;
-      delete temp[i].top;
-    }
-      console.log("Post function test AFTER" , temp);
+      console.log("THIS IS AFTER SLICE", this.temparr);
+      
+     
+    // for (let i =0; i<this.temparr.length; i++) {
+    //   delete this.temparr[i].descript;
+    //   delete this.temparr[i].picture;
+    //   delete this.temparr[i].price;
+    //   delete this.temparr[i].summary;
+    //   delete this.temparr[i].top;
+    // }
+      console.log("Post function test AFTER" , this.temparr);
+      console.log("This is item", item);
 
 
-    let options = new RequestOptions({ headers: headers });
-    let body = {
-      temp
-     };
+    
+    let body = item;
+    
     return this.http.post(this.posturl, JSON.stringify(body), options)
-     .map(res => res.json())
+     .map(res => res.json()).catch((error:any) =>{return Observable.throw(error);}); 
 
 
  }
+
+
   dayitem(){
-
+      
+    let favitem = [];
+    let  favitemarray = [];
+    
      return this.http.get(`${this.menu}.json`).map((resp: Response) => {
-       this.favitem = resp.json().foods;
-       for(let i=0; i<this.favitem.length;i++){
-
-         this.favitemarray.push(this.favitem[i].foods);
-
-            this.favitemarray.forEach((array) => {
-                array.forEach(element => {
+       favitem = resp.json().foods;
+       for(let i=0; i<favitem.length;i++){    
+            if (favitemarray.indexOf(favitem[i]) == -1) {
+      favitemarray.push(favitem[i].foods);
+             }
+       }           
+      let sett = new Set();
+     
+            favitemarray.forEach((array) => {              
+              array.forEach(element => {
                   if (element.top == true) {
-                      if (this.temparr.indexOf(element) ==-1) {
-                          this.temparr.push(element);
-                      }
-
-
-                  }
+                  sett.add(element);  // set is using to avoid duplicates without creating functions and arrays
+ 
+                    }
                 });
             })
-
-       }
-
-      return this.temparr;
+        let sarray = Array.from(sett);
+        console.log(sarray);
+      return sarray;
      })
   }
 

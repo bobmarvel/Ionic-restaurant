@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
-import { CategoryPage } from '../pages';
+
+import { CategoryPage, ItemdetailPage } from '../pages';
 import {Api} from '../../providers/shared';
 
-/*
-  Generated class for the Home page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -27,8 +23,9 @@ export class HomePage {
     } 
       console.log(this.api.menu);
       this.api.dayitem().subscribe((data) =>{
+        
         this.favitem = data;
-        console.log(data);
+       
        
       })
     
@@ -38,8 +35,7 @@ export class HomePage {
       this.navCtrl.push(CategoryPage);
   }
 
-goToDetails() {
-  
-}
-
+goToDetails($event, item) {
+    this.navCtrl.push(ItemdetailPage, item);
+  }
 }
