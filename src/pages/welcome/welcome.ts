@@ -43,28 +43,10 @@ ionViewDidEnter() {
         
       }, 
       (error) => {
-        alert(`Error scannig: ${error}`);
+        alert(`Error scanning: ${error}`);
         this.results = null;
       })
-      /*.then(
-      () => {
-        if (this.results != null) {
-          let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    // let body = this.results.text;
-    let body = this.results.text; 
-     this.http.post('https://food-71485.firebaseio.com/.json', JSON.stringify(body), {headers: headers})
-     .map(res => res.json())
-     .subscribe((data) => {
-       alert(data.name);
-     })
-             this.globalvar.IDStola = this.results;
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.popToRoot;
-        }
-      }
-      ) */
-      
+           
   }
 
 
@@ -86,8 +68,7 @@ test(){
             alert(data.info);
              }
           else {
-            alert("lll");
-          console.log(data);
+            
        this.globalvar.menu = data.url;
         
     this.navCtrl.setRoot(HomePage);
@@ -126,7 +107,7 @@ test(){
             alert(data.info);
              }
           else {
-            alert("lll");
+            alert("rofolmao");
           console.log(data);
        this.globalvar.menu = data.url;
          this.globalvar.IDStola = 123; 

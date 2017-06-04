@@ -21,15 +21,26 @@ export class HomePage {
     if (this.api.IDStola == undefined) {
       this.navCtrl.popToRoot();
     } 
-      console.log(this.api.menu);
-      this.api.dayitem().subscribe((data) =>{
+       let loader = this.loadCtrl.create({
+        content: 'Загрузка данных',
+        spinner: 'crescent'
+      })
+      loader.present().then(()=>{
+       this.api.dayitem().subscribe((data) =>{
         
         this.favitem = data;
-       
-       
-      })
+       loader.dismiss();
+      }),
+      (error) => {
+        alert(error);
+        loader.dismiss();
+      }
+      });
+     
     
   }
+   
+    
 
   MoveToCat() {
       this.navCtrl.push(CategoryPage);

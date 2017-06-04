@@ -15,14 +15,14 @@
 
 <ion-content padding class="bck">
 
-    <button class="pos" ion-button full primary (click)="scan()"> Scan </button>
+    <button class="pos" ion-button full primary (click)="scan()"> Сканировать QR </button>
     <button class="pos" ion-button full color="secondary" (click)="dev() "> Кнопка для теста </button>
 
     <div class="pos1" *ngIf="results">
         <!--<h2> Format: {{results.format}}</h2>
         <h2> Text: {{results.text}}</h2>-->
 
-        <button ion-button full color="secondary" (click)="test() "> Send QR  </button>
+        <button ion-button full color="secondary" (click)="test() "> Отправить QR  </button>
     </div>
 
 
