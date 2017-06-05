@@ -34,7 +34,7 @@ ionViewDidEnter() {
       this.QRscan.scan().then((data) => {
         if (data.format == "QR_CODE") {
           this.results = data;
-        alert("QR успешно отсканирован, нажмите кнопку Test, чтобы проверить его")
+        alert("QR успешно отсканирован, нажмите кнопку 'Отправить', чтобы проверить его")
       }
       else {
         alert("Please, rescan the QR");

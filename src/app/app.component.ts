@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {CartPage, CategoryPage, ItemPage, HomePage, ItemdetailPage, WelcomePage, ZakazPage} from '../pages/pages';
+import {CartPage, CategoryPage,  HomePage, WelcomePage, ZakazPage} from '../pages/pages';
 import {Api} from '../providers/shared';
 
 

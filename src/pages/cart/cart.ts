@@ -106,13 +106,17 @@ export class CartPage {
         let alert = this.alrt.create({
           title: 'Error happened',
       subTitle: "Error code is " + error,
-      buttons: ['OK']
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          this.navCtrl.popToRoot();
+        }
+      }]
+
         });
         alert.present();
         
-        this.navCtrl.popToRoot();
      },
-     
       () => {
           item.forEach(element => {
               this.cartprovdr.removeFromCart(element);
