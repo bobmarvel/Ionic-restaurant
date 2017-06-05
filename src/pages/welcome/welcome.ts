@@ -81,7 +81,6 @@ test(){
         this.globalvar.IDStola = this.results.text;
     
      })
-
   }
 
 
@@ -91,9 +90,6 @@ test(){
        let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
-
-    
-   
     
     let options = new RequestOptions({ headers: headers });
     let body = {
@@ -103,6 +99,7 @@ test(){
      .map(res => res.json())
      .subscribe(
        (data) => {
+         
           if (data.success == false ) {
             alert(data.info);
              }

@@ -54,18 +54,18 @@
 
                 </ion-row>
                 <ion-row>
-                    <ion-col col-8> Цена - {{item.price}} $</ion-col>
+                    <ion-col col-6 class="wow"> Цена : {{item.price}} $</ion-col>
 
                     <ion-col col-28></ion-col>
                     <ion-col>
-                        <ion-icon name="remove-circle" (click)="minusqty(item)"></ion-icon>
+                        <ion-icon name="remove-circle" (click)="minusqty(item)" style="zoom:1.5;"></ion-icon>
                     </ion-col>
-                    <ion-col>{{item.qty}}</ion-col>
+                    <ion-col class="wow">{{item.qty}}</ion-col>
                     <ion-col>
-                        <ion-icon name="add-circle" (click)="plusqty(item)"></ion-icon>
+                        <ion-icon name="add-circle" (click)="plusqty(item)" style="zoom:1.5;"></ion-icon>
                     </ion-col>
                     <ion-col>
-                        <ion-icon name="trash" (click)=removeItem(item)></ion-icon>
+                        <ion-icon name="trash" (click)=removeItem(item) style="zoom:1.5;"></ion-icon>
                     </ion-col>
                 </ion-row>
 

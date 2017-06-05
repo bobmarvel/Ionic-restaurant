@@ -22,7 +22,7 @@ export class HomePage {
       this.navCtrl.popToRoot();
     } 
        let loader = this.loadCtrl.create({
-        content: 'Загрузка данных',
+        content: 'Загрузка блюда дня',
         spinner: 'crescent'
       })
       loader.present().then(()=>{

@@ -6,6 +6,7 @@ page-cart {
         font-family: 'Helvetica Neue', sans-serif;
         text-align: justify;
         text-justify: inter-word;
+        font-size: 1.25em;
     }
     .row-centered {
         text-align: center;
@@ -22,5 +23,10 @@ page-cart {
     }
     .center {
         text-align: center;
+    }
+    .wow {
+        font-size: 1.2em;
+        text-align: center;
+        margin: auto;
     }
 }

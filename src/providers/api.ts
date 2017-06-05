@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Http, Response, RequestOptions, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
+import {Injectable} from "@angular/core";
+import {Headers, Http, RequestOptions, Response} from "@angular/http";
+import "rxjs/add/operator/map";
 // import * as _ from 'lodash';
-import {Observable} from 'rxjs';
+import {Observable} from "rxjs";
 
 
 
@@ -16,7 +16,7 @@ CurrentCategory : any = {};
 IDStola: any;
   menu: any;
   idfoods: number;
-   
+
    temparr: any[];
 
   constructor(public http: Http, ) {
@@ -57,7 +57,7 @@ IDStola: any;
  }
 
  post(item) {
-  
+
       console.log("Post function test PRE" , item);
    let headers = new Headers();
    let options = new RequestOptions({ headers: headers });
@@ -66,8 +66,8 @@ IDStola: any;
       this.temparr = [...item];
 
       console.log("THIS IS AFTER SLICE", this.temparr);
-      
-     
+
+
     // for (let i =0; i<this.temparr.length; i++) {
     //   delete this.temparr[i].descript;
     //   delete this.temparr[i].picture;
@@ -79,35 +79,35 @@ IDStola: any;
       console.log("This is item", item);
 
 
-    
+
     let body = item;
-    
+
     return this.http.post(this.posturl, JSON.stringify(body), options)
-     .map(res => res.json()).catch((error:any) =>{return Observable.throw(error);}); 
+     .map(res => res.json()).catch((error:any) =>{return Observable.throw(error);});
 
 
  }
 
 
   dayitem(){
-      
+
     let favitem = [];
     let  favitemarray = [];
-    
+
      return this.http.get(`${this.menu}.json`).map((resp: Response) => {
        favitem = resp.json().foods;
-       for(let i=0; i<favitem.length;i++){    
+       for(let i=0; i<favitem.length;i++){
             if (favitemarray.indexOf(favitem[i]) == -1) {
       favitemarray.push(favitem[i].foods);
              }
-       }           
+       }
       let sett = new Set();
-     
-            favitemarray.forEach((array) => {              
+
+            favitemarray.forEach((array) => {
               array.forEach(element => {
                   if (element.top == true) {
                   sett.add(element);  // set is using to avoid duplicates without creating functions and arrays
- 
+
                     }
                 });
             })
