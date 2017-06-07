@@ -16,7 +16,7 @@ CurrentCategory : any = {};
 IDStola: any;
   menu: any;
   idfoods: number;
-
+   
    temparr: any[];
 
   constructor(public http: Http, ) {
@@ -56,7 +56,7 @@ IDStola: any;
     })
  }
 
- post(item) {
+ post(item, toggled) {
 
       console.log("Post function test PRE" , item);
    let headers = new Headers();
@@ -64,8 +64,7 @@ IDStola: any;
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
       this.temparr = [...item];
-
-      console.log("THIS IS AFTER SLICE", this.temparr);
+      
 
 
     // for (let i =0; i<this.temparr.length; i++) {
@@ -75,14 +74,38 @@ IDStola: any;
     //   delete this.temparr[i].summary;
     //   delete this.temparr[i].top;
     // }
-      console.log("Post function test AFTER" , this.temparr);
-      console.log("This is item", item);
+      
 
 
 
-    let body = item;
+    // let body = item;
+    
+    console.log("This is item", item);
+    let rofl = [];
+    console.log("this is toggled", toggled);
+    for (let i =0 ; i< this.temparr.length; i++) {
+    rofl.push(
+      
+      
+      {
+      // "help": toggled,
+      "item": [
+       {
+        id: this.temparr[i].id,
+        name: this.temparr[i].name,
+        qty: this.temparr[i].qty
+      }
+      ]
+    }
+  )
+ }
+    
 
-    return this.http.post(this.posturl, JSON.stringify(body), options)
+    JSON.stringify(rofl);
+    console.log("stringified rofl", rofl);
+    
+
+    return this.http.post(this.posturl, rofl, options)
      .map(res => res.json()).catch((error:any) =>{return Observable.throw(error);});
 
 

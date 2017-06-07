@@ -18,6 +18,7 @@ export class CartPage {
 
   public shoppingCartItems$: Observable<any> = of([]);
   public shoppingCartItems = [];
+  toggled: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public cartprovdr: CartProvider, private globalvar: Api, private toast: ToastController, private alrt: AlertController) {
@@ -73,7 +74,7 @@ export class CartPage {
   toast.present();
   }
 
-  post(item) {
+  post(item, toggled) {
       
 
       let confirm = this.alrt.create({
@@ -91,7 +92,7 @@ export class CartPage {
           text: 'Да',
           handler: () => {
             item = this.shoppingCartItems;
-            this.globalvar.post(item).subscribe(
+            this.globalvar.post(item, toggled).subscribe(
        (data) => {   
        
             let alert = this.alrt.create({       
@@ -99,7 +100,9 @@ export class CartPage {
       });
       alert.present();
       setTimeout(()=>{
+         console.log("this is data", data);
           alert.dismiss();
+          this.navCtrl.push(ZakazPage, data);
           
       }, 3030);
      }, (error) => {
@@ -162,4 +165,15 @@ export class CartPage {
     this.navCtrl.setRoot(HomePage);
       this.navCtrl.popToRoot;
    }
+
+   notify() {
+      if (this.toggled == false) {
+        this.toggled = true;
+      }
+      else {
+        this.toggled =false;
+      }
+      console.log("toggled state: ", this.toggled );
+   }
+   
 }

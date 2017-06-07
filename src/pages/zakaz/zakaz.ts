@@ -12,8 +12,11 @@ export class ZakazPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  data: any = [];
   ionViewDidLoad() {
+    
     console.log('ionViewDidLoad Zakaz');
+    this.data = this.navParams.data;
   }
 
 goHome() {

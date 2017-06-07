@@ -14,4 +14,21 @@
 
 <ion-content padding>
 
+    <div *ngIf="!data">
+        <ion-card>
+            <ion-card-header class="my-teams-header">Пустая корзина</ion-card-header>
+            <ion-card-content>
+                <p>Вы не добавили ни одного элемента к корзину.</p>
+                <p class="otstup">Перейдите на страницу желаемого блюда и нажмите кнопку "Добавить в корзину".</p>
+                <button ion-button full color="secondary" (click)="goHome()">
+                    <ion-icon name="search"></ion-icon>
+                  <div class="margin">Вернуться на главную</div>  
+                     </button>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <ion-item-group>
+        <ion-item-divider color="light">Заказ</ion-item-divider>
+        <ion-item *ngFor="let zakaz of data">{{zakaz}}</ion-item>
+    </ion-item-group>
 </ion-content>

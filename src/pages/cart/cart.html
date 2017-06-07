@@ -78,9 +78,12 @@
         </ion-grid>
         <ion-item color="primary" text-center> Итоговая цена {{getTotal() | async}} $ </ion-item>
 
-
+        <ion-item text-wrap>
+            <ion-label> Нужна ли помощь официанта?</ion-label>
+            <ion-toggle (ionChange)="notify()" [checked]="toggled"></ion-toggle>
+        </ion-item>
         <div class="center">
-            <button ion-button round color="secondary" (click)="post(shoppingCartItems)" icon-right text-center>
+            <button ion-button round color="secondary" (click)="post(shoppingCartItems, toggled)" icon-right text-center>
              Отправить заказ на сервер <ion-icon name="send"></ion-icon> 
          </button>
         </div>
