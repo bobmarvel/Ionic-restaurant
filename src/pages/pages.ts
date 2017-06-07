@@ -4,4 +4,4 @@ export * from './item/item';
 export * from './home/home';
 export * from './itemdetail/itemdetail';
 export * from './welcome/welcome';
-export * from './zakaz/Zakaz';
+export * from './order/order';

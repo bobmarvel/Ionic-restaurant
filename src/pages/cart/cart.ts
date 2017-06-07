@@ -1,10 +1,9 @@
+import { Order } from './../order/order';
 import { HomePage } from './../home/home';
 
 import { CategoryPage } from './../category/category';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
-
-import {ZakazPage} from '../pages';
 import {CartProvider, Api} from '../../providers/shared';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs/observable/of';
@@ -18,7 +17,8 @@ export class CartPage {
 
   public shoppingCartItems$: Observable<any> = of([]);
   public shoppingCartItems = [];
-  toggled: boolean = false;
+  
+  isToggled: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public cartprovdr: CartProvider, private globalvar: Api, private toast: ToastController, private alrt: AlertController) {
@@ -26,6 +26,7 @@ export class CartPage {
   }
 
   ionViewWillEnter() {
+    
      if (this.globalvar.IDStola == undefined) {
       this.navCtrl.popToRoot();
     }  
@@ -93,18 +94,26 @@ export class CartPage {
           handler: () => {
             item = this.shoppingCartItems;
             this.globalvar.post(item, toggled).subscribe(
-       (data) => {   
+       (zakazs) => {   
        
             let alert = this.alrt.create({       
-        subTitle: 'Спасибо за заказ! Сейчас вы будете перенаправлены на страницу с заказами.'             
+        subTitle: 'Спасибо за заказ! Сейчас вы будете перенаправлены на страницу с заказами.',
+        buttons: [
+          {
+            text: `OK`,
+            handler: () => {
+               
+            console.log("this is data", zakazs);
+          this.navCtrl.push(Order, zakazs);
+           
+            }
+          }
+        ]  
+                  
       });
       alert.present();
-      setTimeout(()=>{
-         console.log("this is data", data);
-          alert.dismiss();
-          this.navCtrl.push(ZakazPage, data);
-          
-      }, 3030);
+     
+    
      }, (error) => {
         let alert = this.alrt.create({
           title: 'Error happened',
@@ -162,18 +171,12 @@ export class CartPage {
     }
   }
   goHome() {
-    this.navCtrl.setRoot(HomePage);
-      this.navCtrl.popToRoot;
+    
+      this.navCtrl.popToRoot();
    }
 
    notify() {
-      if (this.toggled == false) {
-        this.toggled = true;
-      }
-      else {
-        this.toggled =false;
-      }
-      console.log("toggled state: ", this.toggled );
+
+     console.log("is toggled", this.isToggled);
    }
-   
-}
+  }

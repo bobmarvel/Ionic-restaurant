@@ -64,21 +64,7 @@ IDStola: any;
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin', 'http://localhost:8100 ')
       this.temparr = [...item];
-      
-
-
-    // for (let i =0; i<this.temparr.length; i++) {
-    //   delete this.temparr[i].descript;
-    //   delete this.temparr[i].picture;
-    //   delete this.temparr[i].price;
-    //   delete this.temparr[i].summary;
-    //   delete this.temparr[i].top;
-    // }
-      
-
-
-
-    // let body = item;
+   
     
     console.log("This is item", item);
     let rofl = [];
@@ -88,7 +74,7 @@ IDStola: any;
       
       
       {
-      // "help": toggled,
+      "help": toggled,
       "item": [
        {
         id: this.temparr[i].id,

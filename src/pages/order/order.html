@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar [hideBackButton]="true">
+        <ion-title>Заказы</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="goHome()">
+        <ion-icon name="home" style="zoom:1.5;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div *ngIf="orders.length==0">
+        <ion-card>
+            <ion-card-header class="my-teams-header">Нет заказов</ion-card-header>
+            <ion-card-content>
+                <p>Вы не сделали ни одного заказа.</p>
+                <p class="otstup">Добавьте блюдо в корзину, сформируйте заказ и отправьте его на сервер</p>
+                <button ion-button full color="secondary" (click)="goToCategory()">
+                    <ion-icon name="search"></ion-icon>
+                  <div class="margin">Перейти к категориям</div>  
+                     </button>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngIf="orders.length!==0"> {{orders}}</div>
+
+</ion-content>

@@ -1,7 +1,8 @@
+import { Order } from './../pages/order/order';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import {CartPage, CategoryPage, ItemPage, HomePage, ItemdetailPage, WelcomePage, ZakazPage} from '../pages/pages';
+import {CartPage, CategoryPage, ItemPage, HomePage, ItemdetailPage, WelcomePage, } from '../pages/pages';
 import {Api, CartProvider} from '../providers/shared';
 import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ItemdetailPage,
     WelcomePage,
-    ZakazPage
+    Order
+    
 
   ],
   imports: [
@@ -36,7 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ItemdetailPage,
     WelcomePage,
-    ZakazPage
+    Order
 
   ],
   providers: [

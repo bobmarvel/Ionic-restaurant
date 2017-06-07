@@ -11,13 +11,15 @@ import {Api} from '../../providers/shared';
 })
 export class HomePage {
 
-  favitem: any[] = [];
+  favitem: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public api: Api, public loadCtrl: LoadingController) {}
 
 
     ionViewDidLoad() {
+      this.favitem = [];
+     
     if (this.api.IDStola == undefined) {
       this.navCtrl.popToRoot();
     } 
@@ -29,6 +31,7 @@ export class HomePage {
        this.api.dayitem().subscribe((data) =>{
         
         this.favitem = data;
+         console.log("this is favitem", this.favitem);
        loader.dismiss();
       }),
       (error) => {
