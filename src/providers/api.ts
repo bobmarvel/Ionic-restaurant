@@ -123,7 +123,7 @@ IDStola: any;
         let sarray = Array.from(sett);
         console.log(sarray);
       return sarray;
-     })
+     }).catch((error:any) =>{return Observable.throw("The error is" + error);});
   }
 
  }

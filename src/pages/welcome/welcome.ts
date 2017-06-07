@@ -104,7 +104,7 @@ test(){
             alert(data.info);
              }
           else {
-            alert("rofolmao");
+            alert("Successful");
           console.log(data);
        this.globalvar.menu = data.url;
          this.globalvar.IDStola = 123; 

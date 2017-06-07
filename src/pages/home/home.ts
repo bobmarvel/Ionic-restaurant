@@ -27,8 +27,10 @@ export class HomePage {
         content: 'Загрузка блюда дня',
         spinner: 'crescent'
       })
+
       loader.present().then(()=>{
-       this.api.dayitem().subscribe((data) =>{
+       this.api.dayitem().subscribe(
+         (data) =>{
         
         this.favitem = data;
          console.log("this is favitem", this.favitem);
@@ -38,7 +40,11 @@ export class HomePage {
         alert(error);
         loader.dismiss();
       }
-      });
+    }, 
+    (err) => {
+      alert(err);
+      loader.dismiss();
+    });
      
     
   }
